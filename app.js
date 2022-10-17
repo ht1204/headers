@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.get('/', (req, res) => {
     const { headers } = req;
-    res.send(JSON.stringify(headers));
+    res.status(202).send(headers['user-agent']);
 });
 
 app.listen(PORT, () => console.log('Listening on port 3000!'));
